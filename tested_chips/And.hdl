@@ -13,6 +13,21 @@ CHIP And {
     IN a, b;
     OUT out;
 
-    PARTS:
-    // Put your code here:
+	// LOGICAL DIAGRAM:
+	// =============
+	//
+	// a ------|&&
+	//            |&&------- out
+	// b ------|&&
+	//
+	//
+	//
+	// a ------|&&
+	//            |&& o-----| >o---- out
+	// b ------|&&
+	//
+	PARTS:
+	Nand(a=a, b=b, out=notAB);
+	
+	Not(in=notAB, out=out);
 }
