@@ -13,11 +13,5 @@ CHIP Xor {
     OUT out;
 
     PARTS:
-    
-	Nand(a=a, b=b, out=nandOut);
-	
-	Nand(a=a, b=nandOut, out=aOut);
-	Nand(a=nandOut, b=b, out=bOut);
-	
-	Nand(a=aOut, b=bOut, out=out);
+    // Put your code here:
 }
